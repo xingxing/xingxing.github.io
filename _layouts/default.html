@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Wade Tao | ruby on rails,ruby,mysql,linux,神话,哲学</title>
+    <link rel="stylesheet" href="/stylesheets/greyezed.css" type="text/css" media="screen">
+  </head>
+
+  <body class="home blog admin-bar">
+    <div id="main-wrapper">
+      <div id="page">
+    	<div id="nav">
+    	  <ul>
+	    <li><a class="selected" href="http://wadexing.blog.com/">Home</a></li>
+  	  </ul>
+  	  
+  	  <ul>
+	    <li class="page_item page-item-2"><a href="http://wadexing.blog.com/about/" title="About">About</a></li>
+  	  </ul>
+	</div>
+	
+	<div id="header" role="banner">
+	  <h1><a href="http://wadexing.blog.com/">The Wade Tao</a></h1>
+	  <div class="description">ruby on rails,ruby,mysql,linux,神话,哲学</div>
+	  <div class="rss">stay updated via <a href="http://wadexing.blog.com/feed/rss/" title="RSS">rss</a> </div>
+	</div>
+	<hr>
+
+	<div id="container">	
+	  <div id="sidebar" role="complementary">
+
+	    <div id="ads-placeholder"><div id="azk71839"></div></div>		
+	    <div class="socialfooter">
+	      <h2>Social Connections</h2>
+	      <ul>
+		<li class="facebook-link">
+		  
+<a href="#" target="_blank">Facebook</a></li><li class="twitter-link"><a href="#" target="_blank">Twitter</a></li><li class="flickr-link"><a href="#" target="_blank">Flickr</a></li>			</ul>
+	    </div>
+
+
+	    <!-- begin widgetized sidebar 1 -->	
+	    <ul>
+	      
+	    </ul>
+	    <!-- end widgetized sidebar 1 -->	
+	    
+	  </div>
+	  
+
+	  
+	  <div id="content" role="main">
+	    {{content}}
+
+	    <div class="column">
+	      <div class="post-246 post type-post status-publish format-standard hentry category-common-lisp" id="post-246">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2011/12/19/common-lisp-quick-sorting/" rel="bookmark" title="Permanent Link to common-lisp 快速排序">common-lisp 快速排序</a></h2>
+		  <small>Posted: 19th December 2011 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/common-lisp/" title="View all posts in Common lisp" rel="category tag">Common lisp</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2011/12/19/common-lisp-quick-sorting/#respond" title="Comment on common-lisp 快速排序">0</a></div>
+
+		<div class="entry">
+	{% highlight clojure linenos %}
+	         (defun partition (l)
+		    (let* ((left nil)
+		    (right nil)
+		    (pivot (first l)))
+		    (dolist (x (rest l))
+		    (if (&lt;= x pivot)
+		    (push x left)
+		    (push x right)
+		    ))
+		    (list left right)))
+
+		    (defun quick-sorting (array)
+		    (if (&lt; (list-length array) 2)
+		    array
+		    (let* (
+		    (p (partition array))
+		    (left (first p))
+		    (right (second p))
+		    )
+		    (append (quick-sorting left)
+		    (list (first array))
+		    (quick-sorting right)))))
+	{% endhighlight %}
+
+
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
+		</div>
+		
+
+		
+	      </div>
+	      <div class="post-198 post type-post status-publish format-standard hentry category-2347429" id="post-198">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2011/12/18/%e6%9d%80%e6%89%8b%e7%ab%a5%e8%af%9d/" rel="bookmark" title="Permanent Link to 杀手童话">杀手童话</a></h2>
+		  <small>Posted: 18th December 2011 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e5%91%93/" title="View all posts in 呓" rel="category tag">呓</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2011/12/18/%e6%9d%80%e6%89%8b%e7%ab%a5%e8%af%9d/#respond" title="Comment on 杀手童话">0</a></div>
+
+		<div class="entry">
+		  <p>《史记》上有不少恐怖故事，血腥程度不下于时下好莱坞的B级电影。有人说史记写人多于写史，比小说还精彩，其实想来并没有错，没有那样的人，就没有那样的历史。我喜欢读史记，多年前通读过，近来又读，又有所得，所谓经典，大概就是这样的吧。</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-239 post type-post status-publish format-standard hentry category-ruby-on-rails" id="post-239">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2011/10/23/%e5%ae%89%e8%a3%85nagios/" rel="bookmark" title="Permanent Link to 安装Nagios">安装Nagios</a></h2>
+		  <small>Posted: 23rd October 2011 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/ruby-on-rails/" title="View all posts in Ruby On Rails" rel="category tag">Ruby On Rails</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2011/10/23/%e5%ae%89%e8%a3%85nagios/#respond" title="Comment on 安装Nagios">0</a></div>
+
+		<div class="entry">
+		  <p>依赖:<br>
+		    build-essential<br>
+		    libgd2-dev<br>
+		    php-cgi<br>
+		    spawn-fcgi</p>
+		  <p>启动fastcgi:<br>
+		    sudo spawn-fcgi -a 127.0.0.1 -p 9000 -C 5 -f /usr/bin/php5-cgi</p>
+		  <p>下载Nagios<br>
+		    wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.3.tar.gz<br>
+		    wget http://prdownloads.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</p>
+		  <p>Get Nagios Core – Contains the core monitoring engine and a basic web interface.<br>
+		    Get Nagios Plugins – Allows you to monitor services, applications, metrics, and more.<br>
+		    Get Nagios Frontends – Enhance your Nagios experience with additional frontends.<br>
+		    Get Nagios Addons – Trick out your Nagios install with hundreds of addons.</p>
+		  <p>创建相关用户组及用户<br>
+		    sudo groupadd nagios<br>
+		    sudo useradd -g nagios -md /usr/local/nagios nagios<br>
+		    sudo groupadd nagioscmd</p>
+		  <p>查看web服务器的运行用户,如: www<br>
+		    sudo usermod -G nagioscmd www<br>
+		    sudo usermod -G nagioscmd nagios</p>
+		  <p>core 编译参数：<br>
+		    ./configure –with-cgiurl=/nagios/cgi-bin \<br>
+                    –with-htmurl=/nagios \<br>
+                    –with-nagios-user=nagios \<br>
+                    –with-command-group=nagioscmd</p>
+		  <p>make all<br>
+		    sudo make install<br>
+		    sudo make install-init<br>
+		    sudo make install-commandmode<br>
+		    sudo make install-config</p>
+		  <p>编译Plugins<br>
+		    ./configure<br>
+		    sudo make<br>
+		    sudo make install </p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-238 post type-post status-publish format-standard hentry category-ruby-on-rails" id="post-238">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2011/10/23/%e7%ab%af%e5%8f%a3%e4%bd%bf%e7%94%a8%e6%83%85%e5%86%b5%e6%9f%a5%e7%9c%8b/" rel="bookmark" title="Permanent Link to 端口使用情况查看">端口使用情况查看</a></h2>
+		  <small>Posted: 23rd October 2011 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/ruby-on-rails/" title="View all posts in Ruby On Rails" rel="category tag">Ruby On Rails</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2011/10/23/%e7%ab%af%e5%8f%a3%e4%bd%bf%e7%94%a8%e6%83%85%e5%86%b5%e6%9f%a5%e7%9c%8b/#respond" title="Comment on 端口使用情况查看">0</a></div>
+
+		<div class="entry">
+		  <p>sudo netstat -untap</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-233 post type-post status-publish format-standard hentry category-2347429 category-2347428" id="post-233">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2011/02/26/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e4%bb%a3%e7%a0%81%e7%9a%84%e4%bb%b7%e5%80%bc/" rel="bookmark" title="Permanent Link to 单元测试代码的价值">单元测试代码的价值</a></h2>
+		  <small>Posted: 26th February 2011 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e5%91%93/" title="View all posts in 呓" rel="category tag">呓</a>, <a href="http://wadexing.blog.com/category/%e6%95%a2%e6%83%b3%e4%b8%8d%e6%95%a2%e4%b8%ba%e8%80%85%e7%bb%88%e5%9b%b0%e7%89%a2%e7%ac%bc/" title="View all posts in 敢想不敢为者终困牢笼" rel="category tag">敢想不敢为者终困牢笼</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2011/02/26/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e4%bb%a3%e7%a0%81%e7%9a%84%e4%bb%b7%e5%80%bc/#respond" title="Comment on 单元测试代码的价值">0</a></div>
+
+		<div class="entry">
+		  <p><strong>1、找bug</strong><br>
+		    观察一下那些不写单元测试代码的程序是怎么分配时间的，你会发现编写代码其实只占了很小的一部分。一部分时间花在了弄明白究竟要做什么上，而另一部分时间花在了设计上，但绝大部分时间都用在了调试上面。这些程序员会告诉你他们花费了一天才找到一个bug的事迹。修复bug通常都很快，但是要找到它则完全是一场噩梦。有些人还在坚持这种开发方式。而我却发现如果有一个可以依赖的测试套件，生活就要轻松多了。<br>
+		    <strong>2、重构 </strong><br>
+		    红灯/绿灯/重构：简单来说，首先编写一个失败的测试，让它通过，然后去重构代码。这个流程每天都会重复多次，至少每添加一个新功能就要进行一次。随着系统功能添加，你也逐渐构建起一组回归测试套件，用来验证程序按照预期的方式运行。采用这种开发风格，你可以完成大型的重构，并且用信心不会弄坏系统里的任何现有功能。其结果是<strong>巨大的生产力提升</strong>。而且，我发现自己每天花在调试上的时间好像从来没有超过几分钟。<br>
+		    <strong>3、极限开发方法</strong><br>
+		    编写测试最用的时机之一是在你开始编程之前。当你需要添加一项功能时，应该先从编写测试开始。这其实并不像它听起来那么本末倒置。在编写测试的时候，你会问自己添加这个函数需要做些什么。编写测试还能<strong>让你专注于接口而不是具体实现上</strong>（这是件好事）。它还意味着你能清楚地知道什么时候编程就算完成了——即当测试都通过时。<br>
+		    这种频繁测试的概念是极限编程里非常重要的一部分（Beck,XP）。<br>
+		    <strong>4、程序员测试和质量保证测试</strong><br>
+		    单元测试是一种程序员测试。编写它们是为了提高我作为一名程序员的生产力。质量保证只是它的副作用罢了。<br>
+		    质量保证测试是完全不同的东西。编写它们是为了确保软件作为一个整体能够正常工作。它们为客户提供了质量上的保证，并不关心程序员的生产力。它们应该是由另一个团队来开发的，他们会很高兴找到bug的。这个团队有重量级的工具和技术来帮助他们工作。</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-206 post type-post status-publish format-standard hentry category-ruby-on-rails" id="post-206">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2010/12/20/overview-of-extreme-programming/" rel="bookmark" title="Permanent Link to 敏捷软件开发——极限编程导论">敏捷软件开发——极限编程导论</a></h2>
+		  <small>Posted: 20th December 2010 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/ruby-on-rails/" title="View all posts in Ruby On Rails" rel="category tag">Ruby On Rails</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2010/12/20/overview-of-extreme-programming/#respond" title="Comment on 敏捷软件开发——极限编程导论">0</a></div>
+
+		<div class="entry">
+		  <p>极限(Extreme Programming 以下简称XP)编程大概是最富盛名的敏捷方法。XP是一套简单且相互依存的做法，这些做法贯彻始终达到了1+1&gt;2的效果。</p>
+		  <p><strong>把客户拉进团队</strong></p>
+		  <p>我们希望客户和开发人员能在一块工作，这样他们都能察觉到彼此的问题并一块解决这些问题。</p>
+		  <p>等等，我怎么知道谁是客户呢？对XP团队来说，客户就是对功能拍板和定义的自然人或者集体，比如：和你(你是开发人员的话)同一家公司的业务分析团队或者市场专家；有的时候，客户是用户代表；还有些时候，客户是实际付费的用户。总而言之在XP项目中，无论谁是客户，他们对团队有价值的成员。</p>
+		  <p><strong>用户故事</strong></p>
+		  <p>为了做项目计划，我们需要了解一定需求，但是我们不必在意细枝末节。为了制定计划，我们对需求了解到可以估算的程度就成了。你可能会觉得为了估算需求，就要了解需求的全都细节，此言差矣。你必须了解要做什么，包含哪些方面，但是真的不必关注细枝末节。</p>
+		  <p>随着时间的推移，需求的细节很有可能发生改变，特别是客户看到系统以后。我们和客户聊具体需求，但是不关注细节。相对的，客户记录我们确认了的需求，以便以后提醒我们。开发人员通过和客户的对话和对需求的认识，写项目估算。</p>
+		  <p>用户故事是记录关于需求的对话内容的助记符。</p>
+		  <p><strong>短周期</strong></p>
+		  <p>XP 项目每两周提供试用版本。每两周的迭代用来实现一些相关需求从而发布一个试用版本。每次迭代结束，系统应该向相关人员演示，收集反馈。</p>
+		  <p>迭代计划</p>
+		  <p>一次迭代通常都是两个星期。</p>
+		  <p>发布计划</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-231 post type-post status-publish format-standard hentry category-2347428" id="post-231">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2010/12/17/%e8%bd%ac%e6%80%8e%e6%a0%b7%e6%89%93%e9%80%a0%e4%b8%80%e4%b8%aa%e9%85%b7%e7%bd%91%e7%ab%99%ef%bc%9f/" rel="bookmark" title="Permanent Link to [转]怎样打造一个酷网站？">[转]怎样打造一个酷网站？</a></h2>
+		  <small>Posted: 17th December 2010 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e6%95%a2%e6%83%b3%e4%b8%8d%e6%95%a2%e4%b8%ba%e8%80%85%e7%bb%88%e5%9b%b0%e7%89%a2%e7%ac%bc/" title="View all posts in 敢想不敢为者终困牢笼" rel="category tag">敢想不敢为者终困牢笼</a><br>
+
+		  </small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2010/12/17/%e8%bd%ac%e6%80%8e%e6%a0%b7%e6%89%93%e9%80%a0%e4%b8%80%e4%b8%aa%e9%85%b7%e7%bd%91%e7%ab%99%ef%bc%9f/#respond" title="Comment on [转]怎样打造一个酷网站？">0</a></div>
+
+		<div class="entry">
+		  <p><strong>编者按：本文由<a href="http://bannka.com/">Bannka</a> 联合创始人Dennis Chu （<a href="http://twitter.com/dennisatbannka" target="_blank">@dennisatbannka</a>）供稿。这是他在先后创办<a href="http://vanti.ca/">Vantica</a> 和<a href="http://bannka.com/">Bannka</a> 后总结的一些创业心得。［<a title="查看 创业说 的全部文章" href="http://www.36kr.com/tag/%e5%88%9b%e4%b8%9a%e8%af%b4" target="_blank">创业说</a>］是TC中文推出的创业者交流分享的专栏，如果您也是互联网创业者之一，欢迎来这里发出你的声音、表达你的观点。</strong></p>
+		  <p><strong><br>
+		    </strong></p>
+		  <p>如果你是一个互联网创业者或者产品经理，你大概像这个行业里的每个人一样，梦想建造出这个世界的下一个Google或者Facebook. 你需要每天作出各种各样的决定，而你作出的这些决定往往决定着产品的成败，这里是一些经验原则，你也许会它们能够帮助你清晰地思考，并且作出困难但是正确的决策。</p>
+		  <h2>1. 小即是美</h2>
+		  <p>这很好理解，你没有足够的资源建造任何大的东西。如果你的产品或者服务很小，你投入的成本很低，用户也更加可能尝试。如果他们喜欢，他们会告诉他们的朋友，这是唯一有效的和零美元的营销方式。</p>
+		  <h2>2. 想用户，不要（太多）想竞争对手</h2>
+		  <p>你需要发现用户要什么，我知道这说起来容易做起来难。正因为如此，你才需要很多时间思考、测试和改进。而如果把时间都花在研究你认为的竞争对手身上，你不可避免地失去了思考的时间，结果很可能导致你无法理解你的用户，这增加了犯错的风险，而犯错误的代价很昂贵。你得尽力避免。</p>
+		  <h2>3. 要是这个东西很难做的话，那得掂量掂量</h2>
+		  <p>多数的突破性创新都出乎意料地简单，如果你建造的东西很复杂，再好好想想，它也许不是那个能够带给你成功的东西。</p>
+		  <h2>4. 数据流动性</h2>
+		  <p>有很多成功的，占据统治地位的服务，比如Facebook, Google等，你要做的不是重新建造一套你的社交网络和搜索服务，你要做的是让自己的服务保持数据的可流动，因为人们不需要搬家来使用你的初创服务，你要让人们能够带走他们产生的数据。你要提供工具为数据流动提供方便。</p>
+		  <h2>5. 不要像恐龙那样行事</h2>
+		  <p>你不能像Google或者Facebook 那样行事；他们有钱有一堆的聪明人，做任何事请都比你占优。你需要思考、聚焦在任何足够小的事情上，直到你拥有优势。同时也要注意它是可以扩展的（Scalable）。</p>
+		  <h2>6. 不要拷贝</h2>
+		  <p>很多创业团队喜欢拷贝他人的创意，即使不考虑名誉和自尊心，这也是一项危险的策略，因为你不是世界上唯一的聪明人，有很多其他的聪明人也在想着和你一样的事情，复制一个成功的东西简单、低风险而且快速。但是你很快会发现你和你的克隆兄弟姐妹陷入了一场狗咬狗的苦斗，没有人能够活着出去。</p>
+		  <p>然而，投资到创造一个新事物中，可以让你获得一个“不公平的优势”，那就是对用户、市场和人性深入而准确的理解，拷贝者不具备这项优势。</p>
+		  <p>如果你要给我举例说某某著名创业者连续拷贝，名满中国的实例，我敢肯定地说，你说的那个人，肯定非常羡慕Twitter或者Facebook的创业者。因为他们上电视访谈节目的时候，不必回答电视记者那些讨厌的问题。</p>
+		  <p><strong>源地址：<a href="http://www.36kr.com/7638">http://www.36kr.com/7638</a></strong></p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-224 post type-post status-publish format-standard hentry category-2347429 tag-2350306" id="post-224">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2010/10/13/%e7%94%9f%e6%ad%bb%e4%b9%8b%e4%ba%a4/" rel="bookmark" title="Permanent Link to 生死之交">生死之交</a></h2>
+		  <small>Posted: 13th October 2010 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e5%91%93/" title="View all posts in 呓" rel="category tag">呓</a><br>
+
+		    Tags: <a href="http://wadexing.blog.com/tag/%e5%85%ab%e6%8b%9c%e4%b9%8b%e4%ba%a4/" rel="tag">八拜之交</a></small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2010/10/13/%e7%94%9f%e6%ad%bb%e4%b9%8b%e4%ba%a4/#respond" title="Comment on 生死之交">0</a></div>
+
+		<div class="entry">
+		  <p>榜文行到涿县，引出涿县中一个英雄。那人不甚好读书；性宽和，寡言语，喜怒不形于色；素有大志，专好结交天下豪杰；生得身长七尺五寸，两耳垂肩，双手过膝，目能自顾其耳，面如冠玉，唇若涂脂；中山靖王刘胜之后，汉景帝阁下玄孙，姓刘名备，字玄德。昔刘胜之子刘贞，汉武时封涿鹿亭侯，后坐酎金失侯，因此遗这一枝在涿县。玄德祖刘雄，父刘弘。弘曾举孝廉，亦尝作吏，早丧。玄德幼孤，事母至孝；家贫，贩屦织席为业。家住本县楼桑村。其家之东南，有一大桑树，高五丈余，遥望之，童童如车盖。相者云：“此家必出贵人。”玄德幼时，与乡中小儿戏于树下，曰：“我为天子，当乘此车盖。”叔父刘元起奇其言，曰：“此儿非常人也！”因见玄德家贫，常资给之。年十五岁，母使游学，尝师事郑玄、卢植，与公孙瓒等为友。<br>
+		    　　及刘焉发榜招军时，玄德年已二十八岁矣。当日见了榜文，慨然长叹。随后一人厉声言曰：“大丈夫不与国家出力，何故长叹？”玄德回视其人，身长八尺，豹头环眼，燕颔虎须，声若巨雷，势如奔马。玄德见他形貌异常，问其姓名。其人曰：“某姓张名飞，字翼德。世居涿郡，颇有庄田，卖酒屠猪，专好结交天下豪杰。恰才见公看榜而叹，故此相问。”玄德曰：“我本汉室宗亲，姓刘，名备。今闻黄巾倡乱，有志欲破贼安民，恨力不能，故长叹耳。”飞曰：“吾颇有资财，当招募乡勇，与公同举大事，如何。”玄德甚喜，遂与同入村店中饮酒。<br>
+		    　　正饮间，见一大汉，推着一辆车子，到店门首歇了，入店坐下，便唤酒保：“快斟酒来吃，我待赶入城去投军。”玄德看其人：身长九尺，髯长二尺；面如重枣，唇若涂脂；丹凤眼，卧蚕眉，相貌堂堂，威风凛凛。玄德就邀他同坐，叩其姓名。其人曰：“吾姓关名羽，字长生，后改云长，河东解良人也。因本处势豪倚势凌人，被吾杀了，逃难江湖，五六年矣。今闻此处招军破贼，特来应募。”玄德遂以己志告之，云长大喜。同到张飞庄上，共议大事。飞曰：“吾庄后有一桃园，花开正盛；明日当于园中祭告天地，我三人结为兄弟，协力同心，然后可图大事。”玄德、云长齐声应曰：“如此甚好。”<br>
+		    　　次日，于桃园中，备下乌牛白马祭礼等项，三人焚香再拜而说誓曰：“念刘备、关羽、张飞，虽然异姓，既结为兄弟，则同心协力，救困扶危；上报国家，下安黎庶。不求同年同月同日生，只愿同年同月同日死。皇天后土，实鉴此心，背义忘恩，天人共戮！”誓毕，拜玄德为兄，关羽次之，张飞为弟。</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-223 post type-post status-publish format-standard hentry category-2347429 tag-2350306" id="post-223">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2010/10/13/%e5%bf%98%e5%b9%b4%e4%b9%8b%e4%ba%a4/" rel="bookmark" title="Permanent Link to 忘年之交">忘年之交</a></h2>
+		  <small>Posted: 13th October 2010 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e5%91%93/" title="View all posts in 呓" rel="category tag">呓</a><br>
+
+		    Tags: <a href="http://wadexing.blog.com/tag/%e5%85%ab%e6%8b%9c%e4%b9%8b%e4%ba%a4/" rel="tag">八拜之交</a></small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2010/10/13/%e5%bf%98%e5%b9%b4%e4%b9%8b%e4%ba%a4/#respond" title="Comment on 忘年之交">0</a></div>
+
+		<div class="entry">
+		  <p>出处 《后汉书·祢衡传》：“衡始弱冠，而融年四十，遂与为交友。”<br>
+		    　　孔融字文举，鲁国人，孔子二十世孙。喜欢为学，博览群书。建安年间，献帝在许昌建都，累次迁升到“将作大匠”（官名，相当于大良造，到汉朝时已无实权）。见曹操野心越来越大，到了不能忍的地步，因此总是写奏章讽刺他。曹操忌惮孔融的名声，也不能拿他怎么样。山阳郡守郗虑，见风使舵，以一点小错误上奏请求免去孔融的官；曹操趁机罗织罪名，构陷孔融，说：孔融曾经与祢衡大放厥词，互相吹捧，祢衡说孔融是“仲尼不死”。孔融说祢衡是“颜回复生”。犯了大不敬之罪，于是竟然被害。孔融和广陵陈琳孔璋、山阳王粲仲宣、北海徐干伟长、陈留阮璃元瑜、汝南应瑒德琏、东平刘公干，并称建安七子。其余六子皆与曹操儿子曹丕曹植很有交情，都被曹操辟为掾属，只有孔融为汉尽命。<br>
+		    　　平原祢衡，字正平，也很有文采，但不在七子之列。自以为有文才善言辩，桀骜不驯，喜欢讽刺时事，诋毁权贵，只和孔融惺惺相惜，孔融也很喜爱他的才华。祢衡刚刚二十岁，而孔融已经四十岁，于是结为好友。随后孔融写奏疏推荐祢衡，多次在曹操面前夸赞他。曹操想召见他，但他老是骂曹操。曹操怀恨在心。但祢衡的才华很出名，不想杀他，于是派人把他送给荆州刘表，他又侮慢刘表。刘表也不能容他，因为江夏太守黄祖性子急，把把他送给了他。最后被黄祖所害，死时候才二十六岁。</p>
+		</div>
+		
+		
+	      </div>
+	      <div class="post-222 post type-post status-publish format-standard hentry category-2347429 tag-2350306" id="post-222">
+		<div class="posttitle">
+		  <h2 class="pagetitle"><a href="http://wadexing.blog.com/2010/10/13/%e9%b8%a1%e9%bb%8d%e4%b9%8b%e4%ba%a4/" rel="bookmark" title="Permanent Link to 鸡黍之交">鸡黍之交</a></h2>
+		  <small>Posted: 13th October 2010 by <strong>iamxingxing</strong> in <a href="http://wadexing.blog.com/category/%e5%91%93/" title="View all posts in 呓" rel="category tag">呓</a><br>
+
+		    Tags: <a href="http://wadexing.blog.com/tag/%e5%85%ab%e6%8b%9c%e4%b9%8b%e4%ba%a4/" rel="tag">八拜之交</a></small>
+		</div>
+		<div class="postcomments"><a href="http://wadexing.blog.com/2010/10/13/%e9%b8%a1%e9%bb%8d%e4%b9%8b%e4%ba%a4/#respond" title="Comment on 鸡黍之交">0</a></div>
+
+		<div class="entry">
+		  <p>范式，字巨卿，山阳金乡（今山东金乡县）人。一名范汜。他和汝南人张劭是朋友，张劭字元伯，两人同时在太学（朝廷最高学府）学习。后来范式要回到乡里，他对张劭说：“二年后我还回来，将经过你家拜见你父母，见见小孩。”于是两人约定日期。后来约定的日期就要到了，张劭把事情详细地告诉了母亲，请母亲准备酒菜等待范式。张劭的母亲说：“分别了两年，虽然约定了日期，但是远隔千里，你怎么就确信无疑呢？”张劭说：“范式是个守信的人，肯定不会违约。”母亲说：“如果是这样，我为你酿酒。”到了约定的日期范式果然到了。拜见张劭的母亲，范、张二人对饮，尽欢之后才告别而去。<br>
+		    　　后来张劭得了病，非常严重，同郡人郅君章、殷子征日夜探视他。张劭临终时，叹息说：“遗憾的是没有见到我的生死之交。”殷子征说：“我和郅君章，都尽心和你交友，如果我们称不得上是你的生死之交，谁还能算的上？”张劭说：“你们两人，是我的生之交；山阳的范巨卿，是我的死之交。”张劭不久就病死了。<br>
+		    　　范式忽然梦见了张劭，带着黑色的帽子，穿着袍子，仓促的叫他：“巨卿,我在某天死去，在某天埋葬，永远回到黄泉之下。你没有忘记我，怎么能不来？”范式恍然睡醒，悲叹落泪，于是穿着丧友的丧服，去赶张劭埋葬的那天，骑着马赶去。还没有到达那边已经发丧了。到了坟穴，将要落下棺材，但是灵柩不肯进去。张劭的母亲抚摸着棺材说：“张劭啊，难道你还有愿望？”于是停下来埋葬。没一会，就看见白车白马，号哭而来。张劭的母亲看到说：“这一定是范巨卿。”范式到了之后，吊唁说：“走了元伯，死生异路，从此永别。”参加葬礼的上千人，都为之落泪。范式亲自拉着牵引灵柩的大绳，灵柩于是才前进了。范式于是住在坟墓旁便，为他种植了坟树，然后才离开。</p>
+		</div>
+		
+		
+	      </div>
+	      
+	      
+
+	    </div>
+	    <div id="nav-post">
+	      <div class="navigation-bott">
+		<div class="leftnav"><a href="http://wadexing.blog.com/page/2/">« Older Entries</a></div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <hr>
+	  <div id="footer" role="contentinfo">
+	    
+	    
+	  </div>
+	</div>
+	
+      </div>
+
+      <div id="footer-bott">
+	<p>
+	  Powered by <a href="http://blog.com">Blog.com</a></p>
+
+      </div> <!-- Wrapper -->
+    </div></body>
+  
+</html>
