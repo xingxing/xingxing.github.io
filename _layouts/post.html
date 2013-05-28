@@ -19,11 +19,11 @@
       <div id="page">
     	<div id="nav">
     	  <ul>
-	    <li><a href="http://blog.wadexing.com/">Home</a></li>
+	    <li><a class="selected" href="http://blog.wadexing.com/">Home</a></li>
   	  </ul>
   	  
   	  <ul>
-	    <li class="page_item page-item-2"><a href="http://blog.wadexing.com/about.html" title="About">About</a></li>
+	    <li class="page_item page-item-2"><a href="http://blog.wadexing.com/about/" title="About">About</a></li>
   	  </ul>
 	</div>
 	
@@ -58,19 +58,13 @@
 	  
 	  <div id="content" role="main">
 	    <div class="column">
-	      {{content}}
-	    </div>
-
-	    <div id="nav-post">
-	      <div class="navigation-bott">
-		{% if paginator.previous_page %}
-		  <div class="leftnav"><a href="{{ paginator.previous_page_path }}">《 previous Page</a></div>
-		{% endif %}
-
-		{% if paginator.next_page %}
-		  <div class="rightnav"><a href="{{ paginator.next_page_path }}">》 Next Page</a></div>
-		{% endif %}
+	      <div class="post">
+                {% include post_title.html %}
+		<div class="entry">
+		  {{content}}
+		</div>
 	      </div>
+
 	    </div>
 	  </div>
 

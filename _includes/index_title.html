@@ -1,8 +1,3 @@
----
-layout: default
----
-
-{% for post in site.posts %}
 <div class="posttitle">
   <h2 class="pagetitle">
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -12,7 +7,3 @@ layout: default
     Posted: {{ post.date|date_to_long_string }} by <strong>wadexing</strong> in {{ post.category }} <br>
   </small>
 </div>
-{% endfor %}
-
-
-

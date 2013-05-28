@@ -1,0 +1,44 @@
+---
+layout: post
+title: common-lisp 快速排序
+category: Lisp
+tag: Abc
+---
+
+
+    {% highlight clojure linenos %}
+    (defun partition (l)
+    (let* ((left nil)
+    (right nil)
+    (pivot (first l)))
+    (dolist (x (rest l))
+    (if (<= x pivot)
+    (push x left)
+    (push x right)
+    ))
+    (list left right)))
+
+    (defun quick-sorting (array)
+    (if (< (list-length array) 2)
+    array
+    (let* (
+    (p (partition array))
+    (left (first p))
+    (right (second p))
+    )
+    (append (quick-sorting left)
+    (list (first array))
+    (quick-sorting right)))))
+    {% endhighlight %}
+
+
+    {% highlight ruby %}
+    def show
+    @widget = Widget(params[:id])
+    respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+    end
+    end
+    {% endhighlight %}
+
