@@ -2,16 +2,8 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-<div class="posttitle">
-  <h2 class="pagetitle">
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </h2>
-
-  <small>
-    Posted: {{ post.date|date_to_long_string }} by <strong>wadexing</strong> in {{ post.category }} <br>
-  </small>
-</div>
+{% for post in site.posts limit: 15 %}
+{% include index_title.html %}
 {% endfor %}
 
 

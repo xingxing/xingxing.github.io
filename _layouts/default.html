@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <title>
       {% if page.title %}
-        {{ page.title }}_The Wade Tao | ruby on rails,ruby,mysql,linux,神话,哲学
+        {{ page.title }}_{{ site.title }}
       {% else %}
-        The Wade Tao | ruby on rails,ruby,mysql,linux,神话,哲学
+        {{ site.title }}
       {% endif %}
     </title>
     <link rel="stylesheet" href="/stylesheets/greyezed.css" type="text/css" media="screen">
@@ -30,7 +30,7 @@
 	<div id="header" role="banner">
 	  <h1><a href="http://blog.wadexing.com/">The Wade Tao</a></h1>
 	  <div class="description">ruby on rails,ruby,mysql,linux,神话,哲学</div>
-	  <div class="rss">stay updated via <a href="http://blog.wadexing.com/feed/rss/" title="RSS">rss</a> </div>
+	  <div class="rss">stay updated via <a href="/feed.xml" title="RSS">rss</a> </div>
 	</div>
 	<hr>
 
@@ -63,13 +63,7 @@
 
 	    <div id="nav-post">
 	      <div class="navigation-bott">
-		{% if paginator.previous_page %}
-		  <div class="leftnav"><a href="{{ paginator.previous_page_path }}">《 previous Page</a></div>
-		{% endif %}
-
-		{% if paginator.next_page %}
-		  <div class="rightnav"><a href="{{ paginator.next_page_path }}">》 Next Page</a></div>
-		{% endif %}
+		<div class="leftnav"><a href="/archive/">去日苦多</a></div>
 	      </div>
 	    </div>
 	  </div>
@@ -80,7 +74,7 @@
       </div>
       <div id="footer-bott">
 	<p>
-	  Powered by <a href="http://blog.com">Blog.com</a>
+	  Powered by <a href="http://github.com">Github.com</a>
 	</p>
       </div> <!-- Wrapper -->
   </body>
